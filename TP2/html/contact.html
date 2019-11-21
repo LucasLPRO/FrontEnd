@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contacter le beau zoo de Grenoble</title>
+    <metaname="description" content="Le site du beau zoo"/>
+    <metaname="author" content="Lucas GOMIS"/>
+    <link rel="stylesheet" href="../css/zooLayout.css">
+  </head>
+  <body>
+    <header>
+      <h1> <b> Le beau zoo de Grenoble</b> </h1>
+
+      <hr>
+      <nav class="menuFlex" role="navigation">
+        <ul class="menu">
+          <li><a href="./index.html"> Accueil</a></li>
+          <li><a href="./menu.html"> Menu</a></li>
+          <li><a href="./activites.html"> Activités</a></li>
+          <li class="has-children"><a href="./animaux.html"> Animaux</a>
+            <ul class="sous-menu">
+              <li><a href="./audio.html"> Banque de sons</a></li>
+              <li><a href="./video.html"> Scènes vidéos</a></li>
+            </ul>
+          </li>
+          <li class="menuActif"><a href="./contact.html"> Contact</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+      <form class="" action="contact.html" method="post">
+        <span>Nom : </span><input type="text" name="nom" value="" required><br/>
+        <span>Prénom : </span><input type="text" name="prenom" value=""><br/>
+        <span>Email : </span><input type="email" name="email" value="" required><br/>
+        <span>Téléphone : </span><input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="telephone" value=""><br/>
+        <span>Message : </span><input type="text" name="message" value="" required><br/>
+        <input type="submit" name="envoyer" value="Envoyer">
+      </form>
+    </main>
+    </body>
