@@ -8,9 +8,14 @@
       <script src="functions.js"></script>
   </head>
   <body>
-    <form id="tableauVille" action="index.html">
+      <form id="tableauVille" action="index.html" onSubmit="event.preventDefault();">
       <input id="villeSaisie" type="text" name="ville" value="">
-      <input type="submit" name="envoi" value="Envoyer">
+      <input id="btnSubmit" type="submit" name="envoi" value="Choisir une destination">
     </form>
+      <p id="Destination"> </p>
+      <ul id="laListe">
+      
+      </ul>
+      
   </body>
 </html>
