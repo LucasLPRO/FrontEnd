@@ -1,11 +1,7 @@
-window.addEventListener("load", genererVille);
+jQuery(document).ready(function() {
+    $( "#tableauVille" ).submit(function( event ) {
 
-function genererVille() {
-    document.getElementById("tableauVille").addEventListener("submit", tableauxPays);
-}    
-
-function tableauxPays() {
-    var France = ['Grenoble', 'Paris', 'Lyon', 'Marseille'];
+var France = ['Grenoble', 'Paris', 'Lyon', 'Marseille'];
     var Espagne = ['Madrid', 'Barcelone', 'Valence', 'Seville'];
     var Italie = ['Milan', 'Rome', 'Turin', 'Venise'];
     var Allemagne = ['Munich', 'Breme', 'Berlin', 'Leipzig'];
@@ -75,8 +71,8 @@ function tableauxPays() {
     } else {
         event.preventDefault();
     }
-   
-}
+    });
+});
 
 function afficherTableau(tableau) {
     var res = "";
@@ -88,7 +84,3 @@ function afficherTableau(tableau) {
 //        document.getElementById('laListe').innerHTML += "<li>" + tableau[i] + "</li>";
 //    }
 }   
-
-function ajoutVille() {
-    
-}
