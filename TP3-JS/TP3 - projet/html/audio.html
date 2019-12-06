@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>La banque son du beau zoo de Grenoble</title>
+    <metaname="description" content="Le site du beau zoo"/>
+    <metaname="author" content="Lucas GOMIS"/>
+    <link rel="stylesheet" href="../css/zooLayout.css">
+  </head>
+  <body>
+    <header>
+      <h1> <b> Le beau zoo de Grenoble</b> </h1>
+
+      <hr>
+      <nav class="menuFlex" role="navigation">
+        <ul class="menu">
+          <li><a href="./index.html"> Accueil</a></li>
+          <li><a href="./menu.html"> Menu</a></li>
+          <li><a href="./activites.html"> Activités</a></li>
+          <li class="has-children menuActif"><a href="./animaux.html"> Animaux</a>
+            <ul class="sous-menu">
+              <li class="menuActif"><a href="./audio.html"> Banque de sons</a></li>
+              <li><a href="./video.html"> Scènes vidéos</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html"> Contact</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+      <section>
+        <ul>
+          <li> Le fameux coq de Grenoble
+            <audio controls>
+              <source src="../sons/corneilles.mp3" type="audio/mpeg" allow="autoplay">
+              <source src="../sons/coq.mp3" type="audio/mpeg">
+               Your browser does not support the audio element
+             </audio>
+          </li>
+          <li> Le cougar de Grenoble
+            <audio controls>
+              <source src="../sons/cougar.mp3" type="audio/mpeg">
+              <source src="../sons/corneilles.mp3" type="audio/mpeg">
+               Your browser does not support the audio element
+            </audio>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>

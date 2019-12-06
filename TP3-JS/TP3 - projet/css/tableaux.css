@@ -1,0 +1,51 @@
+/*Fichier CSS commun à tous les tableaux du site */
+
+#tableauFlex {
+  display:flex;
+  justify-content:center;
+}
+
+table {
+  border-collapse: collapse;
+  text-align:center;
+}
+
+caption {
+  color:#80bd5b;
+  font-weight:bold;
+}
+
+thead {
+  height:50px;
+  background-color:#0d8d8b;
+}
+
+tbody tr {
+  height:140px;
+}
+
+td {
+  border-width:1px;
+  border-style:solid;
+  border-color:#80bd5b;
+}
+
+.ligneTableau:nth-child(even) {
+  background-color:#9ffa67;
+}
+
+.ligneTableau:hover {
+  background-color:pink;
+}
+
+td.description {
+  width:350px;
+}
+
+tr td img {
+  width:150px;
+}
+
+.button {
+    margin-top:45%;
+}
