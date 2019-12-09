@@ -1,6 +1,4 @@
 window.addEventListener("load", genererTableauAnimaux);
-window.addEventListener("load", adminTableau);
-
 
 function genererTableauAnimaux() {
     var table = document.getElementById("bodyTableau");
@@ -47,66 +45,18 @@ function genererTableauAnimaux() {
         
         var BtnSuppr = document.createElement('button');
         BtnSuppr.type = "button";
-        //BtnSuppr.id = "btnSuppr";
-        BtnSuppr.id = "btnSuppr" + i;
+        BtnSuppr.id = i;
         var BtnSuppTxt = document.createTextNode("Supprimer");
         tr.appendChild(BtnSuppr);
         BtnSuppr.appendChild(BtnSuppTxt);
-        //BtnSuppr.onclick = deleteRow(this);
-        //BtnSuppr.onclick = onClickBtSuppr;
-        //BtnSuppr.onclick = onClickBtSuppr(i);
-        //BtnSuppr.onclick = onClickBtSuppr;
+        BtnSuppr.onclick = onClickBtSuppr;
         tdButton.appendChild(BtnSuppr);
-        //tdBtnSuppr.onclick = "this.parentNode.parentNode.parentNode.deleteRow(this.parentNode.parentNode.rowIndex)";
     }
 }
 
-function adminTableau() {
-   // document.getElementById("btnSuppr").addEventListener("click", onClickBtSuppr(document.getElementById("montableau" ).rowIndex));
-  document.getElementById("btnSuppr0").addEventListener("click", onClickBtSuppr(0));
-  document.getElementById("btnSuppr1").addEventListener("click", onClickBtSuppr(1));
-  document.getElementById("btnSuppr2").addEventListener("click", onClickBtSuppr(2));
-  document.getElementById("btnSuppr3").addEventListener("click", onClickBtSuppr(3));
-  document.getElementById("btnSuppr4").addEventListener("click", onClickBtSuppr(4));
-  document.getElementById("btnSuppr5").addEventListener("click", onClickBtSuppr(5));
-  document.getElementById("btnSuppr6").addEventListener("click", onClickBtSuppr(6));
-}
-
-function onClickBtSuppr(id) {
-//    var ligne = id.substr(id.length);
-//    deleteRow(ligne);
-//    document.getElementById("tableauAnimaux").deleteRow(id);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//    window.alert("click");
-//this.parentNode.parentNode.parentNode.deleteRow(this.parentNode.parentNode.rowIndex);
-//  document.getElementById('tableau').deleteRow(ligne.rowIndex);
-// 
-//  var tableau = document.getElementById('tableau');
-//  var trs = tableau.rows;
-//  var n = trs.length;
-//  var i;
-// 
-//  alert(n);
-//  for (i = 1; i < n; i++)
-//  {
-//    trs[i].cells[0].innerHTML = trs[i].rowIndex;
-//  }
-//    $("table").find("#remove").on ("click", function (){
-//$(this).closest('tr').remove();
-//});
-
+function onClickBtSuppr() {
+    var id = "ligne" + this.getAttribute('id');
+    jQuery(document).ready(function() {
+        $("#" + id).remove();
+    });
 }
