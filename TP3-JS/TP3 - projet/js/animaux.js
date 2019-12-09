@@ -3,7 +3,7 @@ window.addEventListener("load", adminTableau);
 
 
 function genererTableauAnimaux() {
-    var table = document.getElementById("tableauAnimaux");
+    var table = document.getElementById("bodyTableau");
     var i;
     for (i = 0; i < jsonAnimaux.Animal.length; i++) {
         var tr = document.createElement('tr');
@@ -37,32 +37,62 @@ function genererTableauAnimaux() {
         tdPhoto.appendChild(imgPhoto);
         
         //Boutons
-        var tdButton = document.createElement('button');
-        tdButton.type= "button";
+        var tdButton = document.createElement('td');
+        var Button = document.createElement('button');
+        Button.type= "button";
         var tdButtonTexte = document.createTextNode("Découvrir");
         tr.appendChild(tdButton);
-        tdButton.appendChild(tdButtonTexte);
+        tdButton.appendChild(Button);
+        Button.appendChild(tdButtonTexte);
         
-        var tdBtnSuppr = document.createElement('button');
-        tdBtnSuppr.type = "button";
-        tdBtnSuppr.id = "btnSuppr";
-        var tdBtnSuppTxt = document.createTextNode("Supprimer");
-        tr.appendChild(tdBtnSuppr);
-        tdBtnSuppr.appendChild(tdBtnSuppTxt);
-       //tdBtnSuppr.onclick = onClickBtSuppr();
-       //tdBtnSuppr.onclick = "this.parentNode.parentNode.parentNode.deleteRow(this.parentNode.parentNode.rowIndex)";
+        var BtnSuppr = document.createElement('button');
+        BtnSuppr.type = "button";
+        //BtnSuppr.id = "btnSuppr";
+        BtnSuppr.id = "btnSuppr" + i;
+        var BtnSuppTxt = document.createTextNode("Supprimer");
+        tr.appendChild(BtnSuppr);
+        BtnSuppr.appendChild(BtnSuppTxt);
+        //BtnSuppr.onclick = deleteRow(this);
+        //BtnSuppr.onclick = onClickBtSuppr;
+        //BtnSuppr.onclick = onClickBtSuppr(i);
+        //BtnSuppr.onclick = onClickBtSuppr;
+        tdButton.appendChild(BtnSuppr);
+        //tdBtnSuppr.onclick = "this.parentNode.parentNode.parentNode.deleteRow(this.parentNode.parentNode.rowIndex)";
     }
 }
 
 function adminTableau() {
    // document.getElementById("btnSuppr").addEventListener("click", onClickBtSuppr(document.getElementById("montableau" ).rowIndex));
-  document.getElementById("btnSuppr").addEventListener("click", onClickBtSuppr);
+  document.getElementById("btnSuppr0").addEventListener("click", onClickBtSuppr(0));
+  document.getElementById("btnSuppr1").addEventListener("click", onClickBtSuppr(1));
+  document.getElementById("btnSuppr2").addEventListener("click", onClickBtSuppr(2));
+  document.getElementById("btnSuppr3").addEventListener("click", onClickBtSuppr(3));
+  document.getElementById("btnSuppr4").addEventListener("click", onClickBtSuppr(4));
+  document.getElementById("btnSuppr5").addEventListener("click", onClickBtSuppr(5));
+  document.getElementById("btnSuppr6").addEventListener("click", onClickBtSuppr(6));
 }
 
-function onClickBtSuppr() {
-//    document.getElementById("tableauAnimaux").deleteRow(3);
+function onClickBtSuppr(id) {
+//    var ligne = id.substr(id.length);
+//    deleteRow(ligne);
+//    document.getElementById("tableauAnimaux").deleteRow(id);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //    window.alert("click");
-
+//this.parentNode.parentNode.parentNode.deleteRow(this.parentNode.parentNode.rowIndex);
 //  document.getElementById('tableau').deleteRow(ligne.rowIndex);
 // 
 //  var tableau = document.getElementById('tableau');
@@ -75,8 +105,8 @@ function onClickBtSuppr() {
 //  {
 //    trs[i].cells[0].innerHTML = trs[i].rowIndex;
 //  }
-    $("table").find("#remove").on ("click", function (){
-$(this).closest('tr').remove();
-});
+//    $("table").find("#remove").on ("click", function (){
+//$(this).closest('tr').remove();
+//});
 
 }
