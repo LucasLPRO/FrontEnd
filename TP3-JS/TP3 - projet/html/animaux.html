@@ -34,7 +34,7 @@
         <div id="tableauFlex">
           <table id="tableauAnimaux" summary="Nos animaux">
             <caption>Les plus beaux animaux de notre zoo</caption>
-            <thead class="titreColonne">
+            <thead>
               <th>Nom </th>
               <th>Description</th>
               <th>Pays natal</th>
@@ -46,10 +46,18 @@
           </table>
         </div>
       </section>
+    <div>
+        <form>
+            <span> Nom : </span><input required name="nom" type="text" id='nouveau-nom'/><br>
+            <span> Description : </span><input required name="desc" type="text" id='nouvelle-desc'/><br>
+            <span> Pays : </span><input required name="pays" type="text" id='nouveau-pays'/><br>
+            <span> Photo : </span><input required name="photo" type="file" id='nouvelle-photo'/><br>
+            <input id="ajout-ligne" type="button" value="Ajouter"/>
+        </form>
+    </div>
     </main>
   </body>
   <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="../js/model.js"></script>
   <script type="text/javascript" src="../js/animaux.js"></script>
-  <script type="text/javascript" src="../js/functions.js"></script>
 </html>
