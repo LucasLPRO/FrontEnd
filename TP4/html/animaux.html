@@ -5,12 +5,22 @@
     <title>Les animaux du beau zoo de Grenoble</title>
     <meta name="description" content="Le site du beau zoo"/>
     <meta name="author" content="Lucas GOMIS"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/zooLayout.css">
     <link rel="stylesheet" href="../css/tableaux.css">
   </head>
   <body>
     <header>
-      <h1> <b> Le beau zoo de Grenoble</b> </h1>
+        <div id="titre-connexion">
+            <div id="header">
+                <h1 >Le beau zoo de Grenoble </h1>
+            </div>
+            <div>
+                <button id="btn-connexion" type="button" class="btn btn-primary" data-toggle="modal" data-target="exampleModalLong">
+                    Se connecter
+                </button>   
+            </div>            
+        </div>
 
       <hr>
       <nav class="menuFlex" role="navigation">
@@ -56,8 +66,8 @@
         </form>
     </div>
     </main>
-  </body>
   <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="../js/model.js"></script>
   <script type="text/javascript" src="../js/animaux.js"></script>
+  </body>
 </html>

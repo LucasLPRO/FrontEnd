@@ -11,7 +11,7 @@ header {
 
 main {
   position:relative;
-  top:170px;
+  top:200px;
 }
 
 .menuFlex ul {
@@ -72,10 +72,37 @@ main {
 
 h1 {
   color:red;
+  font-weight: bold;
   text-align:center;
   font-family:cursive;
+}
+/*
+#titre-connexion {
+    width: 100%;
+}*/
+
+#header {
+width: 90%;
+float:left;
+}
+
+#btn-connexion {
+    margin-top: 5px;
 }
 
 h2 {
   color:green;
+}
+
+/* Responsive */
+@media screen and (max-width: 200px) { /* vue mobile */
+    main {
+        top: 6550px;
+    }
+}
+
+@media screen and (min-width: 201px) { /* vue mobile */
+    main {
+        top: 200px;
+    }
 }
