@@ -1,0 +1,181 @@
+//Question 1
+@for $i from 1 through 4 {
+  .taille-#{$i} {
+    width: 25% * $i;
+  }
+}
+
+//Question 2
+@mixin generer_classes_taille() {
+	$elements: 4;
+	@for $i from 1 through $elements {
+		.taille-#{$i} {
+			width: (100% / $elements) * $i;
+		}
+	}
+}
+@include generer_classes_taille()
+
+// Question 3:
+$tailles: ("petite", "standard", "moyenne", "grande");
+@for $i from 1 through 4 {
+  .taille-#{nth($tailles, $i)} {
+    width: 25% * $i;
+  }
+}
+
+// Question 4:
+@mixin generateStringTaille {
+  $tailles: ("petite", "standard", "moyenne", "grande");
+  @for $i from 1 through 4 {
+    .taille-#{nth($tailles, $i)} {
+      width: 25% * $i;
+    }
+  }
+}
+
+//Question 5
+@mixin tableau_tailles($classe, $liste) {
+    $tailles: ("petite", "standard", "moyenne", "grande");
+    @for $element from 1 through 4 {
+        .#{$className}-#{nth($tailles, $element)} {
+            width: 25% * $element;
+        }
+    }
+}
+
+
+//Question 6
+@function returnFirstInArray($array) {
+ 	@return nth($array, 1);
+} @mixin tableau_tailles($classe, $liste) {
+ 	$i:0;
+ 	@each $element in $liste {
+            .#{$class}-#{$element} {
+                 $tableau_tailles: petit, standard, moyen, grand;
+                .bouton::before{
+                content:returnFirstInArray($tableau_tailles);
+            }
+        }
+    }
+ }
+
+//Question 7
+@function returnLastInArray($array) {
+ 	@return nth($array, length($array));
+ }
+ $tableau_tailles: petit, standard, moyen, grand;
+ 	.bouton::after {
+ 	content:returnLastInArray($tableau_tailles)
+ }
+
+//Question 8
+ $destinations: (
+  "espagne": "Espagne",
+  "maroc": "Maroc",
+  "bresil": "Brésil",
+  "caraibes": "Les îles caraibes"
+);
+
+//Question 9
+
+@mixin ajouterTexte($liste, $position:'before', $prefix:'classe') {
+	@each $element in $liste {
+		.#{$prefix}-#{nth($element, 1)}::#{$position} {
+			display:block;
+			content: "#{nth($element,2)}";
+		}
+	}
+}
+@include ajouterTexte($destinations);
+
+
+// Question 10:
+
+@mixin generateDestinationsFromList($list, $isBefore) {
+  @each $key, $city in $destinations {
+    @if $isBefore {
+      .ville-#{$key}::before {
+        display: block;
+        content: "#{$city}";
+      }
+    } @else {
+      .ville-#{$key}::after {
+        display: block;
+        content: "#{$city}";
+      }
+    }
+  }
+}
+
+//Question 11
+$social: (
+  "facebook": (
+    "color": #4267b2,
+    "background-color": #4267b2
+  ),
+  "twitter": (
+    "color": #1da1f2,
+    "background-color": #1da1f2
+  ),
+  "linkedin": (
+    "color": #006699,
+    "background-color": #006699
+  ),
+  "instagram": (
+    "color": #455dc7,
+    "background-color": #455dc7
+  ),
+  "pinterest": (
+    "color": #cd1f28,
+    "background-color": #cd1f28
+  ),
+  "youtube": (
+    "color": #ff0000,
+    "background-color": #ff0000
+  )
+);
+
+// Question 12:
+@each $socialName, $mapColor in $social {
+  .fa-#{$socialName} {
+    background-color: white;
+    color: map.get($mapColor, "color");
+    width: 48px;
+  }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 48px !important;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+//Question 13
+@mixin ajouterTexte($liste, $prefix) {
+	@each $element in $liste {
+		.#{$prefix}-#{nth($element, 1)} {
+			background:white;
+			color: #{nth($element,2)};
+		}
+	}
+}
+@include ajouterTexte($social, 'fa');
+
+
+//Question 14
+@mixin ajouterTexte($liste, $prefix, $percent) {
+	@each $element in $liste {
+		.#{$prefix}-#{nth($element, 1)} {
+			background: #{lighten(nth($element, 2), $percent)};
+			color: #{nth($element,2)};
+		}
+	}
+}
+@include ajouterTexte($social, 'fa', 30%);

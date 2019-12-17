@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Les animaux du beau zoo de Grenoble</title>
+    <meta name="description" content="Le site du beau zoo"/>
+    <meta name="author" content="Lucas GOMIS"/>
+    <link rel="stylesheet" href="../css/zooLayout.css">
+    <link rel="stylesheet" href="../css/tableaux.css">
+  </head>
+  <body>
+    <header>
+      <h1> <b> Le beau zoo de Grenoble</b> </h1>
+
+      <hr>
+      <nav class="menuFlex" role="navigation">
+        <ul class="menu">
+          <li><a href="./index.html"> Accueil</a></li>
+          <li><a href="./menu.html"> Menu</a></li>
+          <li><a href="./activites.html"> Activités</a></li>
+          <li class="has-children menuActif"><a href="./animaux.html"> Animaux</a>
+            <ul class="sous-menu">
+              <li><a href="./audio.html"> Banque de sons</a></li>
+              <li><a href="./video.html"> Scènes vidéos</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html"> Contact</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+      <section>
+        <div id="tableauFlex">
+          <table id="tableauAnimaux" summary="Nos animaux">
+            <caption>Les plus beaux animaux de notre zoo</caption>
+            <thead>
+              <th>Nom </th>
+              <th>Description</th>
+              <th>Pays natal</th>
+              <th>Photo</th>
+              <th>En savoir plus</th>
+            </thead>
+            <tbody id="bodyTableau">
+            </tbody>
+          </table>
+        </div>
+      </section>
+    <div>
+        <form>
+            <span> Nom : </span><input required name="nom" type="text" id='nouveau-nom'/><br>
+            <span> Description : </span><input required name="desc" type="text" id='nouvelle-desc'/><br>
+            <span> Pays : </span><input required name="pays" type="text" id='nouveau-pays'/><br>
+            <span> Photo : </span><input required name="photo" type="file" id='nouvelle-photo'/><br>
+            <input id="ajout-ligne" type="button" value="Ajouter"/>
+        </form>
+    </div>
+    </main>
+  </body>
+  <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="../js/model.js"></script>
+  <script type="text/javascript" src="../js/animaux.js"></script>
+</html>

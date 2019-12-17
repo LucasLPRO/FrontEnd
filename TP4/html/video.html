@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Les vidéos du beau zoo de Grenoble</title>
+    <meta name="description" content="Le site du beau zoo"/>
+    <meta name="author" content="Lucas GOMIS"/>
+    <link rel="stylesheet" href="../css/zooLayout.css">
+  </head>
+  <body>
+    <header>
+      <h1> <b> Le beau zoo de Grenoble</b> </h1>
+
+      <hr>
+      <nav class="menuFlex" role="navigation">
+        <ul class="menu">
+          <li><a href="./index.html"> Accueil</a></li>
+          <li><a href="./menu.html"> Menu</a></li>
+          <li><a href="./activites.html"> Activités</a></li>
+          <li class="has-children menuActif"><a href="./animaux.html"> Animaux</a>
+            <ul class="sous-menu">
+              <li><a href="./audio.html"> Banque de sons</a></li>
+              <li class="menuActif"><a href="./video.html"> Scènes vidéos</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html"> Contact</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+      <section>
+        <p> Nos plus beaux chameaux :
+          <video controls width="250" autoplay>
+            <source src="../videos/camels.mp4" type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </p>
+        <p> Nos plus beaux éléphants :
+          <video controls width="250">
+            <source src="../videos/elephants.mp4" type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </p>
+      </section>
+    </main>
+  </body>

@@ -1,0 +1,82 @@
+/*Fichier CSS commun à tous les tableaux du site */
+
+#tableauFlex {
+  display:flex;
+  justify-content:center;
+}
+
+table {
+  border-collapse: collapse;
+  text-align:center;
+}
+
+caption {
+  color:#80bd5b;
+  font-weight:bold;
+}
+
+thead {
+  height:50px;
+  background-color:#0d8d8b;
+}
+
+tbody tr {
+  height:140px;
+}
+
+td {
+  border-width:1px;
+  border-style:solid;
+  border-color:#80bd5b;
+}
+
+td.description {
+  width:350px;
+}
+
+tr td img {
+  width:150px;
+}
+
+.button {
+    margin-top:45%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) { /* vue mobile */
+    .ligneTableau:nth-child(even) {
+        background-color:red;
+    }
+    
+    .ligneTableau:nth-child(odd) {
+        background-color:#EF9A87;
+    }
+    
+    .ligneTableau:hover {
+        background-color:#733030;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) { /* vue tablette */
+    .ligneTableau:nth-child(even) {
+        background-color:#21578A;
+    }
+    
+    .ligneTableau:nth-child(odd) {
+        background-color:#82BBB2;
+    }
+    
+    .ligneTableau:hover {
+        background-color:#0083FF;
+    }
+}
+
+@media screen and (min-width: 993px) { /* vue ordinateur */
+    .ligneTableau:nth-child(even) {
+        background-color:#9ffa67;
+    }
+    
+    .ligneTableau:hover {
+        background-color:pink;
+    }
+}
