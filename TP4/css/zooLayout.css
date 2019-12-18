@@ -9,10 +9,10 @@ header {
   z-index: 44;
 }
 
-main {
+/*main {
   position:relative;
   top:200px;
-}
+}*/
 
 .menuFlex ul {
     margin: 0px;
@@ -95,14 +95,16 @@ h2 {
 }
 
 /* Responsive */
-@media screen and (max-width: 200px) { /* vue mobile */
+@media screen and (max-width: 975px) { /* vue petit écran */
     main {
-        top: 6550px;
+        position:relative;
+        top: 300px;
     }
 }
 
-@media screen and (min-width: 201px) { /* vue mobile */
+@media screen and (min-width: 976px) { /* vue grand écran */
     main {
+        position:relative;
         top: 200px;
     }
 }
