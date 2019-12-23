@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les services du beau zoo de Grenoble</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Le site du beau zoo"/>
+        <meta name="author" content="Lucas GOMIS"/>
+        <link rel="stylesheet" href="../css/bootstrap-4/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/zooLayout.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+            <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script type="text/javascript" src="../js/map.js"></script>
+    </head>
+    <body>
+      <header>
+        <div id="titre-connexion">
+            <div id="header">
+                <h1 >Le beau zoo de Grenoble </h1>
+            </div>
+            <div>
+                <button id="btn-connexion" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                    Se connecter
+                </button>   
+            </div>            
+        </div>
+
+      <hr>
+      <nav class="menuFlex" role="navigation">
+        <ul class="menu">
+          <li><a href="./index.html"> Accueil</a></li>
+          <li><a href="./menu.html"> Menu</a></li>
+          <li><a href="./activites.html"> Activités</a></li>
+          <li><a class="menuActif" href="./services.html"> Services</a></li>          
+          <li class="has-children"><a href="./animaux.html"> Animaux</a>
+            <ul class="sous-menu">
+              <li><a href="./audio.html"> Banque de sons</a></li>
+              <li><a href="./video.html"> Scènes vidéos</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html"> Contact</a></li>
+        </ul>
+      </nav>
+      <hr>
+     </header>
+        <main>
+            <div class="container">
+                <div class="informations">
+                    <h3> Informations : </h3>
+                    <p>Le beau zoo de Grenoble a été créé en 1997.</p>
+                    <p>Le beau zoo de Paris a été créé en 2000.</p>
+                    <p>Le beau zoo de Bordeaux a été créé en 2009.</p>
+                    <hr>
+                </div>
+                <div class="localisation">
+                    <h3> Nos différents parcs animaliers :  </h3>
+                    <div id="mapid"></div>
+                    <hr>
+                </div>
+                <div class="assistance">
+                    <h3> Nous contacter : </h3>
+                    <p>Le beau zoo de Grenoble est joignable au 04.76.04.76.10</p>
+                    <p>Le beau zoo de Paris est joignable au 01.71.04.76.10</p>
+                    <p>Le beau zoo de Bordeaux est joignable au 03.89.04.76.10</p>
+                    <hr>
+                </div>
+            </div>
+
+
+        </main>
+        
+      <!-- MODAL -->  
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              <div class="form-field">
+                <label for="username">Nom d'utilisateur</label>
+                <input
+                  placeholder="admin"
+                  name="username"
+                  type="text"
+                  id="login-username-input"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="password">Mot de passe</label>
+                <input
+                  name="password"
+                  id="login-password-input"
+                  type="password"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <p id="error-message"></p>
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Me connecter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <footer></footer>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+
+    </body>
+</html>

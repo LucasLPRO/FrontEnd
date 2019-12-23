@@ -1,0 +1,118 @@
+/* Fichier CSS commun à toutes les pages du site pour la mise en forme générale */
+
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background-color: white;
+  z-index: 44;
+}
+
+/*main {
+  position:relative;
+  top:200px;
+}*/
+
+.menuFlex ul {
+    margin: 0px;
+    padding: 0px;
+    background: tomato;
+    list-style:none;
+}
+
+.menuFlex a {
+    padding: 1em;
+    display: block;
+    text-align:center;
+    text-decoration: none;
+}
+
+.menuFlex .menu {
+    display: flex;
+    flex-direction : row;
+    justify-content:space-around;
+}
+
+.menu li:hover {
+  background-color:pink;
+}
+
+.menu li {
+  width:100%;
+}
+
+.menu a {
+  color:white;
+}
+
+.has-children {
+  position: relative;
+}
+
+.has-children:hover > .sous-menu {
+  display: flex;
+}
+
+.sous-menu {
+  display: none;
+  flex-flow:column wrap;
+  width:100%;
+  position: absolute;
+}
+
+.sous-menu a {
+  text-align:center;
+  color:white;
+}
+
+.menu .menuActif {
+  background-color: pink;
+}
+
+h1 {
+  color:red;
+  font-weight: bold;
+  text-align:center;
+  font-family:cursive;
+}
+/*
+#titre-connexion {
+    width: 100%;
+}*/
+
+#header {
+width: 90%;
+float:left;
+}
+
+#btn-connexion {
+    margin-top: 5px;
+}
+
+h2 {
+  color:green;
+}
+
+h3 {
+    color:lightseagreen;
+}
+/* Responsive */
+@media screen and (max-width: 975px) { /* vue petit écran */
+    main {
+        position:relative;
+        top: 300px;
+    }
+}
+
+@media screen and (min-width: 976px) { /* vue grand écran */
+    main {
+        position:relative;
+        top: 200px;
+    }
+}
+
+/* Maps */ 
+#mapid { 
+    height: 500px; 
+}
