@@ -32,31 +32,41 @@ function addMap() {
 //    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 //});
 //
-    var iconZoo = L.icon({
-        iconUrl: '../images/marqueur2.png',
-            iconSize: [1656, 912],
+    var iconBdxPar = L.icon({
+        iconUrl: '../images/marqueur.png',
+            iconSize: [23, 40],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
             shadowSize: [41, 41]
     });
     
+    var iconGre = L.icon({
+        iconUrl: '../images/marqueur-gre.png',
+            iconSize: [26, 40],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+    });
     
 
   //Bordeaux
-  var markerBdx = L.marker([44.837489, -0.578060], {icon: iconZoo}).addTo(mymap);
+  var markerBdx = L.marker([44.837489, -0.578060], {icon: iconBdxPar}).addTo(mymap);
   //var markerBdx = L.marker([44.837489, -0.578060]).addTo(mymap);
   var popupBdx = L.popup({closeOnClick: false, autoClose:false})
     .setContent('<p>Notre dernier zoo !<br />Le beau zoo de Bordeaux !</p>');
     markerBdx.bindPopup(popupBdx).openPopup();
   
   //Grenoble
-  var markerGre = L.marker([45.188516, 5.723782]).addTo(mymap);
+  var markerGre = L.marker([45.188516, 5.723782], {icon: iconGre}).addTo(mymap).on('click', onClick);
+    function onClick() {
+      alert("Notre beau zoo !");
+    };
   var popupGre = L.popup({closeOnClick: false, autoClose:false})
     .setContent('<p>Notre premier zoo !<br />Le beau zoo de Grenoble !</p>');
     markerGre.bindPopup(popupGre).openPopup();
     
   //Paris
-  var markerParis = L.marker([48.855650, 2.351332]).addTo(mymap);
+  var markerParis = L.marker([48.855650, 2.351332], {icon: iconBdxPar}).addTo(mymap);
   var popupParis = L.popup({closeOnClick: false, autoClose:false})
     .setContent('<p>Notre plus grand zoo !<br />Le beau zoo de Paris !</p>');
     markerParis.bindPopup(popupParis).openPopup();
